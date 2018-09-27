@@ -8,14 +8,14 @@ from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
 
-driver = webdriver.Chrome(r'C:\Users\Rishabh-Pc\Downloads\chromedriver')
+driver = webdriver.Chrome(r'C:\Users\Rishabh-Pc\Downloads\chromedriver')    # Change this to your ChromeDriver Directory
 
 driver.get("https://facebook.com/")
 wait = WebDriverWait(driver, 600)
 
 userpass = []
 
-with open(r'D:\Web Development and Programming\CS50\Final Project\Automated\credentials.txt') as f:
+with open(r'D:\Web Development and Programming\credentials.txt') as f:     # Change this directory to credentials.txt path and Add your username and password to automsatically login to your facebook account
     for line in f:
         name = (line.rstrip('\n'))
         userpass.append(name)
